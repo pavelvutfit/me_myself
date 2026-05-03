@@ -8,7 +8,7 @@
 * **Nástroj:** Gemini Pro 3.1
 * **Prompt (nebo způsob použití):**
   > "Navrhni rozložení a sekce pro můj osobní web. Chci mít alespoň 5 sekcí jako 'About Me', atd. Každá sekce by měla obsahovat informace o mých zkušenostech, dovednostech a projektech." 
-* **Míra generování:** 20 % (pouze návrh struktury a tématického obsahu), 20 % (template pro každou sekci), 60 % (ruční úpravy a modifikace)
+* **Míra generování v této sekci:** 20 % (pouze návrh struktury a tématického obsahu), 20 % (template pro každou sekci), 60 % (ruční úpravy a modifikace)
 
 ---
 
@@ -16,7 +16,7 @@
 * **Nástroj:** GitHub Copilot: GPT-5.4 Codex Mini
 * **Prompt (nebo způsob použití):**
   > "Doplň sekci 'About Me' a 'Education' na mém osobním webu. Přidej informace o mých zájmech, dovednostech a vzdělání, které by mohly být relevantní." 
-* **Míra generování:** 100 % (pouze doplnění informací)
+* **Míra generování v této sekci:** 100 % (pouze doplnění informací)
 
 ---
 
@@ -24,7 +24,7 @@
 * **Nástroj:** Gemini Pro 3.1
 * **Prompt (nebo způsob použití):**
   > "Přidej animaci 'smoothScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické bezier křivky pro plynulý efekt s časem 1s." 
-* **Míra generování:** 25 % (pouze přidání funkce pro animaci)
+* **Míra generování v této sekci:** 25 % (pouze přidání funkce pro animaci)
 
 
 # Zdroje

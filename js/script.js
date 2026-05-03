@@ -1,9 +1,13 @@
+/* script.js - JavaScript for animation and interaction on web */
+/* Inspired by "Zadání projektu 1" from ITW course at FIT VUT */
+
 document.addEventListener("DOMContentLoaded", () => {
     
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     const SCROLL_DURATION = 1000;
 
+    /*Created with help of generative AI */
     const smoothScrollTo = (targetY, duration = SCROLL_DURATION) => {
         const startY = window.scrollY;
         const distance = targetY - startY;
@@ -85,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(form) {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            alert("Thank you for your message! This is a demo form.");
+            alert("Thank you for your message!.");
             form.reset();
         });
     }
