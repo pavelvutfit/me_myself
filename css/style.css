@@ -294,6 +294,49 @@ section {
     gap: 30px;
 }
 
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card p {
+    margin-bottom: 16px;
+}
+
+.project-card .tags {
+    margin-top: auto;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 18px;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 12px 20px rgba(35, 100, 241, 0.2);
+}
+
+.project-btn i {
+    font-size: 1.05em;
+}
+
 .tags span {
     display: inline-block;
     background: #eef2ff;
