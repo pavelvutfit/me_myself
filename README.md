@@ -26,8 +26,15 @@
   > "Přidej animaci 'smoothScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické bezier křivky pro plynulý efekt s časem 1s." 
 * **Míra generování v této sekci:** 25 % (pouze přidání funkce pro animaci)
 
+# Poznámky
+
+- Jednoduchá a přehledná web sebe-prezentace, zlomek návrhu a informačního obsahu byl částečně generován pomocí AI, ale většina úprav a finálního obsahu byla vytvořena ručně.
+
+- Velká inspirace pro návrh pochází z volně dostupného GitHub repozitáře s osobními weby, hlavní inspirací pro strukturu a obsah jsou od uživatele "Aathif Zahir", vše uvedeno ve zdrojích.
 
 # Zdroje
 
 - [Gemini Pro 3.1](https://gemini.google.com/app?hl=cs) - Použitý nástroj pro generování obsahu a návrh struktury webu.
 - [Zadání projektu 1](https://www.fit.vut.cz/study/course/ITW/private/cviceni/projekt1/) - Inspirace pro `script.js` a strukturu hlavního adresáře.
+- [Developers Portfolios](https://github.com/emmabostian/developer-portfolios) - Inspirace pro design a strukturu osobních webů.
+- [GitHub - Aathif Zahir](https://az-dev.vercel.app/#home) - Inspirace pro design a strukturu osobního webu.
