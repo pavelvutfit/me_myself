@@ -24,9 +24,10 @@
 * **Nástroj:** Gemini Pro 3.1
 * **Prompt (nebo způsob použití):**
   > "Přidej animaci 'smoothScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické bezier křivky pro plynulý efekt s časem 1s." 
-* **Míra generování:** 100 % (pouze přidání funkce pro animaci)
+* **Míra generování:** 25 % (pouze přidání funkce pro animaci)
 
 
 # Zdroje
 
 - [Gemini Pro 3.1](https://gemini.google.com/app?hl=cs) - Použitý nástroj pro generování obsahu a návrh struktury webu.
+- [Zadání projektu 1](https://www.fit.vut.cz/study/course/ITW/private/cviceni/projekt1/) - Inspirace pro `script.js` a strukturu hlavního adresáře.
