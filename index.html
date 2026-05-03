@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="global-nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">Presentation</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <img src="img/jorji.jpg" alt="Profile Picture" class="pfp-photo">
+            <h1>Hello, I'm <span class="highlight">Pavel Zezula</span></h1>
+            <h2>Computer Science Student & Beer Lover</h2>
+            <p>There are two types of problems: those that require a sophisticated and intelligent programming solution, and those that can be solved with the right amount of beer. Usually, it's both.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="#about" class="btn">Learn More About Me</a>
+        </div>
+    </section>
+
+    <!-- SEKCE: ABOUT -->
+    <section id="about" class="about-section bg-alt">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="title-line"></div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a 22-year-old Computer Science student with a passion for software development and technology. My journey in programming started several years ago, and since then, I've been constantly learning and growing my skills.</p>
+                    <p>Throughout my academic career, I've worked on various projects that range from web applications to algorithms and data structures. I enjoy the process of turning ideas into reality through code and always strive to write clean, efficient solutions.</p>
+                </div>
+                
+                <div class="about-stats-card">
+                    <ul class="stats-list">
+                        <li><span>Age</span> <strong>22 years</strong></li>
+                        <li><span>Location</span> <strong>Your City, Country</strong></li>
+                        <li><span>Status</span> <strong>CS Student</strong></li>
+                        <li><span>Email</span> <strong>your@email.com</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCE: EDUCATION (S Podsekcemi) -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="title-line"></div>
+            
+            <div class="timeline">
+                <!-- Podsekce 1 -->
+                <article class="timeline-item card">
+                    <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="content">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <div class="meta">
+                            <span><i class="fas fa-award"></i> University Name</span>
+                            <span><i class="far fa-calendar"></i> 2020 - 2024</span>
+                        </div>
+                        <p>Focusing on software engineering, algorithms, and data structures. Maintaining a strong GPA while actively participating in coding competitions and hackathons.</p>
+                        <h4>Key Achievements:</h4>
+                        <ul>
+                            <li>Dean's List multiple semesters</li>
+                            <li>Participated in ACM programming contests</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Podsekce 2 -->
+                <article class="timeline-item card">
+                    <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="content">
+                        <h3>High School Diploma</h3>
+                        <div class="meta">
+                            <span><i class="fas fa-award"></i> High School Name</span>
+                            <span><i class="far fa-calendar"></i> 2016 - 2020</span>
+                        </div>
+                        <p>Graduated with honors, specializing in mathematics and sciences. Developed early interest in programming and technology.</p>
+                        <h4>Key Achievements:</h4>
+                        <ul>
+                            <li>Valedictorian honors</li>
+                            <li>Founded school coding club</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCE: PROJECTS -->
+    <section id="projects" class="projects-section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="title-line"></div>
+            <p class="section-subtitle">A selection of my recent work showcasing various technologies</p>
+
+            <div class="projects-grid">
+                <!-- Projekt 1 -->
+                <article class="project-card card">
+                    <div class="project-header">
+                        <i class="fab fa-github fa-2x"></i>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack e-commerce application with user authentication, product management, and payment integration.</p>
+                    <div class="tags">
+                        <span>React</span><span>Node.js</span><span>MongoDB</span>
+                    </div>
+                </article>
+
+                <!-- Projekt 2 -->
+                <article class="project-card card">
+                    <div class="project-header">
+                        <i class="fab fa-github fa-2x"></i>
+                    </div>
+                    <h3>Task Management System</h3>
+                    <p>A collaborative task management tool with real-time updates and team collaboration features.</p>
+                    <div class="tags">
+                        <span>React</span><span>TypeScript</span><span>Firebase</span>
+                    </div>
+                </article>
+
+                <!-- Projekt 3 -->
+                <article class="project-card card">
+                    <div class="project-header">
+                        <i class="fab fa-github fa-2x"></i>
+                    </div>
+                    <h3>Weather Forecast App</h3>
+                    <p>A weather application providing real-time forecasts and historical weather data visualization.</p>
+                    <div class="tags">
+                        <span>React</span><span>OpenWeather API</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCE: SKILLS -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="title-line"></div>
+
+            <div class="skills-grid">
+                <div class="skill-category card">
+                    <h3>Frontend Development</h3>
+                    <div class="skill">
+                        <div class="skill-name"><span>HTML/CSS</span><span>95%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name"><span>JavaScript</span><span>92%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category card">
+                    <h3>Backend Development</h3>
+                    <div class="skill">
+                        <div class="skill-name"><span>Node.js</span><span>82%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 82%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name"><span>Python</span><span>78%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 78%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCE: CONTACT -->
+    <section id="contact" class="contact-section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="title-line"></div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form card" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZÁPATÍ -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>Made with <i class="fas fa-heart"></i> by Your Name</p>
+            <p>&copy; 2026 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+/**
+* Main style for ITW projet 2
+* Autor: Pavel Zezula (xzezulp00)
+* Datum: 2026-05-01
+* Description: This CSS file defines the styles for a personal presentational website.
+*/
+
+/* Typography and color */ 
+:root {
+    --bg-color: #ffffff;
+    --bg-alt: #f8f9fa;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1100px;
+    --min-width: 320px;
+}
+
+/* Basic reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* smooth croll */
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+/* Default styling for section titles and subtitles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.title-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 0 auto 40px auto;
+}
+
+/* Reusable card */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+/* Header --- navigation */
+
+/* fixed navigation */
+.global-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 10000;
+}
+
+/* Flexbox for logo */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Flexbox for menu parts*/
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.5s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none; /* Hide on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SEKCE (Layouty pomocí Flexbox a Grid)
+   ========================================================================== */
+section {
+    padding: 100px 0; /* Odsazení kvůli fixnímu menu */
+}
+
+/* HERO SEKCE (Flexbox centrování) */
+.main-banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pfp-photo {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto 60px;
+    background: #eef2ff;
+    border: 4px solid #eef2ff;
+}
+
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.highlight { color: var(--primary-color); }
+.hero-content h2 { color: var(--text-muted); font-weight: 400; margin-bottom: 20px; }
+
+/* ABOUT SEKCE (CSS Grid pro dvousloupcový layout) */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p { margin-bottom: 5px; }
+
+.stats-list {
+    list-style: none;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.stats-list li:last-child { border-bottom: none; }
+
+/* EDUCATION SEKCE (Flexbox pro časovou osu) */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.icon-box {
+    background: #eef2ff;
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* PROJECTS SEKCE (CSS Grid pro responzivní galerii) */
+/* Automaticky vytvoří sloupce s minimální šířkou 300px */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #eef2ff;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+/* SKILLS SEKCE (CSS Grid) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* CONTACT SEKCE (CSS Grid) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+/* Tlačítka */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.btn:hover { background-color: var(--primary-hover); }
+
+/* Zápatí */
+footer {
+    background-color: #111827;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer a { color: #fff; margin: 0 10px; font-size: 1.5rem; }
+
+/* ==========================================================================
+   RESPONZIVNÍ DESIGN (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Přeměna Gridu na 1 sloupec pro menší obrazovky */
+    .about-grid, .skills-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 { font-size: 2.5rem; }
+    
+    /* Mobilní navigace (Hamburger menu) */
+    .hamburger { display: block; }
+    
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        display: none; /* Standardně skryto */
+    }
+    
+    .nav-links.active {
+        display: flex; /* Zobrazí se pomocí JS po kliknutí */
+    }
+}
