@@ -11,13 +11,13 @@
     --bg-alt: #f8f9fa;
     --text-color: #333333;
     --text-muted: #666666;
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
+    --primary-color: #2364f1;
+    --primary-hover: #1b4bd0;
     --card-bg: #ffffff;
     --border-color: #e5e7eb;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --max-width: 1100px;
-    --min-width: 320px;
+    --min-width: 400px;
 }
 
 /* Basic reset and global styles */
@@ -285,8 +285,9 @@ section {
     flex-shrink: 0;
 }
 
-/* PROJECTS SEKCE (CSS Grid pro responzivní galerii) */
-/* Automaticky vytvoří sloupce s minimální šířkou 300px */
+/* Projects sections (CSS Grid for responsive gallery) */
+/* Automatically create cols with width 300px */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -304,7 +305,7 @@ section {
     margin-top: 10px;
 }
 
-/* SKILLS SEKCE (CSS Grid) */
+/* Skills section (CSS Grid) */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -333,7 +334,7 @@ section {
     border-radius: 4px;
 }
 
-/* CONTACT SEKCE (CSS Grid) */
+/* Contant section (CSS Grid) */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -378,7 +379,7 @@ section {
 
 .btn:hover { background-color: var(--primary-hover); }
 
-/* Zápatí */
+/* Footer */
 footer {
     background-color: #111827;
     color: #fff;
@@ -388,18 +389,16 @@ footer {
 
 footer a { color: #fff; margin: 0 10px; font-size: 1.5rem; }
 
-/* ==========================================================================
-   RESPONZIVNÍ DESIGN (Media Queries)
-   ========================================================================== */
+/* Media Queries */
 @media (max-width: 768px) {
-    /* Přeměna Gridu na 1 sloupec pro menší obrazovky */
+    /* Change grid to 1 col on small screeens */
     .about-grid, .skills-grid, .contact-grid {
         grid-template-columns: 1fr;
     }
     
     .hero-content h1 { font-size: 2.5rem; }
     
-    /* Mobilní navigace (Hamburger menu) */
+    /* Hamburger menu */
     .hamburger { display: block; }
     
     .nav-links {
@@ -413,10 +412,10 @@ footer a { color: #fff; margin: 0 10px; font-size: 1.5rem; }
         padding: 20px 0;
         gap: 20px;
         box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-        display: none; /* Standardně skryto */
+        display: none; /* Normally hidden */
     }
     
     .nav-links.active {
-        display: flex; /* Zobrazí se pomocí JS po kliknutí */
+        display: flex; /* Shown in JS on click */
     }
 }
