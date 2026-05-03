@@ -28,7 +28,9 @@
 
 # Poznámky
 
-- Jednoduchá a přehledná web sebe-prezentace, zlomek návrhu a informačního obsahu byl částečně generován pomocí AI, ale většina úprav a finálního obsahu byla vytvořena ručně.
+- Webová stránka je umústěna na VUT FIT studentském serveru, konkrétně na adrese: [https://www.stud.fit.vutbr.cz/~xzezulp00/](https://www.stud.fit.vutbr.cz/~xzezulp00/).
+
+- Jednoduchá a přehledná web sebe-prezentace, zlomek návrhu a informačního obsahu byl částečně generován pomocí AI (více v ai auditu výše), ale většina úprav a finálního obsahu byla vytvořena ručně.
 
 - Velká inspirace pro návrh pochází z volně dostupného GitHub repozitáře s osobními weby, hlavní inspirací pro strukturu a obsah jsou od uživatele "Aathif Zahir", vše uvedeno ve zdrojích.
 
