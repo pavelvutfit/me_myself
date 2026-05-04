@@ -6,49 +6,66 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     const SCROLL_DURATION = 1000;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let activeScrollAnimation = null;
 
-    /*Created with help of generative AI */
-    const smoothScrollTo = (targetY, duration = SCROLL_DURATION) => {
+    const easeInOutCubic = (t) => (
+        t < 0.5
+            ? 4 * t * t * t
+            : 1 - Math.pow(-2 * t + 2, 3) / 2
+    );
+
+    const animateScrollTo = (targetY) => {
+        if (activeScrollAnimation !== null) {
+            cancelAnimationFrame(activeScrollAnimation);
+            activeScrollAnimation = null;
+        }
+
         const startY = window.scrollY;
-        const distance = targetY - startY;
-        const startTime = performance.now();
+        const maxY = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
+        const destinationY = Math.max(0, Math.min(targetY, maxY));
+        const distance = destinationY - startY;
 
-        const easeInOutCubic = (t) => (
-            t < 0.5
-                ? 4 * t * t * t
-                : 1 - Math.pow(-2 * t + 2, 3) / 2
-        );
+        if (Math.abs(distance) < 1) return;
+
+        const startTime = performance.now();
 
         const step = (currentTime) => {
             const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = easeInOutCubic(progress);
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const easedProgress = easeInOutCubic(progress);
 
-            window.scrollTo(0, startY + distance * eased);
+            window.scrollTo(0, startY + distance * easedProgress);
 
             if (progress < 1) {
-                requestAnimationFrame(step);
+                activeScrollAnimation = requestAnimationFrame(step);
+            } else {
+                activeScrollAnimation = null;
             }
         };
 
-        requestAnimationFrame(step);
-    };
-
-    const scrollToSection = (hash) => {
-        const target = document.querySelector(hash);
-        if (!target) return;
-
-        smoothScrollTo(target.getBoundingClientRect().top + window.scrollY);
+        activeScrollAnimation = requestAnimationFrame(step);
     };
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener("click", (e) => {
             const hash = link.getAttribute("href");
+            if (!hash || hash === "#") return;
+
             const target = document.querySelector(hash);
             if (!target) return;
 
             e.preventDefault();
-            scrollToSection(hash);
+
+            const navOffset = document.querySelector(".global-nav")?.offsetHeight ?? 0;
+            const targetY = target.getBoundingClientRect().top + window.scrollY - navOffset;
+
+            if (prefersReducedMotion) {
+                window.scrollTo(0, targetY);
+            } else {
+                animateScrollTo(targetY);
+            }
+
             navLinks.classList.remove("active");
         });
     });

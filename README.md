@@ -20,10 +20,10 @@
 
 ---
 
-## 3. Animace "smoothSctrollTo" pro navigační odkazy.
+## 3. Animace "animateScrollTo" pro navigační odkazy.
 * **Nástroj:** Gemini Pro 3.1
 * **Prompt (nebo způsob použití):**
-  > "Přidej animaci 'smoothScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické bezier křivky pro plynulý efekt s časem 1s." 
+  > "Přidej animaci 'animateScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické bezier křivky pro plynulý efekt s časem 1s." 
 * **Míra generování v této sekci:** 25 % (pouze přidání funkce pro animaci)
 
 # Poznámky

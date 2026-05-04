@@ -29,7 +29,7 @@
 
 html {
     /* smooth croll */
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
@@ -110,10 +110,18 @@ body {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: var(--text-color);
+}
+
+.logo i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
 }
 
 /* Flexbox for menu parts*/
@@ -146,6 +154,7 @@ body {
 
 section {
     padding: clamp(72px, 8vw, 100px) 0; /* Offset because of fixed navigation */
+    scroll-margin-top: 86px;
 }
 
 /* Intro section */
