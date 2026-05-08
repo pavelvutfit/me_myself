@@ -15,6 +15,49 @@ document.addEventListener("DOMContentLoaded", () => {
             : 1 - Math.pow(-2 * t + 2, 3) / 2
     );
 
+    const galleryImages = document.querySelectorAll(".about-photo");
+    if (galleryImages.length > 0) {
+        const lightbox = document.createElement("div");
+        lightbox.className = "lightbox";
+        lightbox.innerHTML = `
+            <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+            <img class="lightbox-image" alt="">
+        `;
+
+        const lightboxImage = lightbox.querySelector(".lightbox-image");
+        const closeButton = lightbox.querySelector(".lightbox-close");
+
+        const closeLightbox = () => {
+            lightbox.classList.remove("open");
+            lightboxImage.src = "";
+            lightboxImage.alt = "";
+        };
+
+        galleryImages.forEach((image) => {
+            image.addEventListener("click", () => {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt;
+                lightbox.classList.add("open");
+            });
+        });
+
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        closeButton.addEventListener("click", closeLightbox);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+
+        document.body.appendChild(lightbox);
+    }
+
     const animateScrollTo = (targetY) => {
         if (activeScrollAnimation !== null) {
             cancelAnimationFrame(activeScrollAnimation);

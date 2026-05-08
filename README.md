@@ -20,11 +20,13 @@
 
 ---
 
-## 3. Animace "animateScrollTo" pro navigační odkazy.
+## 3. Animace "animateScrollTo" a lightbox pro obrázky.
 * **Nástroj:** Gemini Pro 3.1
 * **Prompt (nebo způsob použití):**
-  > "Přidej animaci 'animateScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické bezier křivky pro plynulý efekt s časem 1s." 
-* **Míra generování v této sekci:** 25 % (pouze přidání funkce pro animaci)
+  > "Přidej animaci 'animateScrollTo' pro navigační odkazy na mém webu. Když uživatel klikne na odkaz v navigaci, stránka by měla plynule přejít na odpovídající sekci s použitím kubické křivky pro plynulý efekt s časem 1s."
+
+   > "Prosím implementuj mi jednoduchý lightbox efekt pro kliknutí na obrázky z galerie v sekci about-me" 
+* **Míra generování v této sekci:** 75 % (pouze přidání funkce pro animaci a lightbox), 25 % (ruční úpravy a modifikace)
 
 # Poznámky
 
